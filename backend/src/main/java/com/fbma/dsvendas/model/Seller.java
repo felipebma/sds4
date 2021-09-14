@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -27,6 +29,7 @@ public class Seller implements Serializable {
   @Setter
   private String name;
 
+  @JsonIgnore
   @OneToMany(mappedBy = "seller")
   private List<Sale> sales = new ArrayList<>();
 
