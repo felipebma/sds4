@@ -13,12 +13,12 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class SellerDTO implements Serializable{
+public class SellerDTO implements Serializable {
 
   Long id;
   String name;
 
-  public SellerDTO(Seller seller){
+  public SellerDTO(Seller seller) {
     this.id = seller.getId();
     this.name = seller.getName();
   }

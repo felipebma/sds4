@@ -5,4 +5,4 @@ spring:
     open-in-view: false
   profiles:
     active:
-    - test
+      - test

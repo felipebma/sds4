@@ -10,17 +10,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 @RequestMapping("/seller")
-public class SellerController{
+public class SellerController {
 
   @Autowired
   private SellerService service;
 
   @GetMapping
   public List<SellerDTO> findAll() {
-      return service.findAll();
+    return service.findAll();
   }
-  
+
 }
