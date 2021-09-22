@@ -3,6 +3,7 @@ package com.fbma.dsvendas.controllers;
 import java.util.List;
 
 import com.fbma.dsvendas.model.dtos.SaleDTO;
+import com.fbma.dsvendas.model.dtos.SellerSuccessRateDTO;
 import com.fbma.dsvendas.model.dtos.SellerSumDTO;
 import com.fbma.dsvendas.services.SalesService;
 
@@ -29,5 +30,10 @@ public class SalesController {
   @GetMapping("/amount-by-seller")
   public ResponseEntity<List<SellerSumDTO>> amountGroupedBySeller() {
     return ResponseEntity.ok(service.amountGroupedBySeller());
+  }
+
+  @GetMapping("/success-by-seller")
+  public ResponseEntity<List<SellerSuccessRateDTO>> successRateBySeller() {
+    return ResponseEntity.ok(service.successRateGroupedBySeller());
   }
 }

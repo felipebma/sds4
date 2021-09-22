@@ -3,6 +3,7 @@ package com.fbma.dsvendas.services;
 import java.util.List;
 
 import com.fbma.dsvendas.model.dtos.SaleDTO;
+import com.fbma.dsvendas.model.dtos.SellerSuccessRateDTO;
 import com.fbma.dsvendas.model.dtos.SellerSumDTO;
 import com.fbma.dsvendas.repositories.SalesRepository;
 
@@ -25,5 +26,9 @@ public class SalesService {
 
   public List<SellerSumDTO> amountGroupedBySeller() {
     return repository.amountGroupedBySeller();
+  }
+
+  public List<SellerSuccessRateDTO> successRateGroupedBySeller() {
+    return repository.successRateGroupedBySeller();
   }
 }
